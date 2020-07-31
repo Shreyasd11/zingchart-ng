@@ -1,17 +1,7 @@
-<style>
-  mat-card {
-    background-color: rgb(78, 72, 72);
-  }
-
-  mat-placeholder {
-    color: rgb(44, 41, 41);
-  }
-</style>
-
 <!-- Toolbar -->
-<div style="background-image: linear-gradient(#7f00ff,#020202);">
+
   <mat-toolbar color="primary">
-    <mat-toolbar-row style="min-height: 90px !important; height: 90px !important;">
+    <mat-toolbar-row>
       <span>
         <mat-form-field>
           <input matInput aria-label="Search">
@@ -21,6 +11,7 @@
     </mat-toolbar-row>
   </mat-toolbar>
 
+  <div>
   <!-- Grid-list for different types of charts -->
   <mat-grid-list cols="3" rowHeight="4:3" gutterSize="6px">
     <mat-grid-tile>
@@ -48,7 +39,7 @@
       </mat-card>
     </mat-grid-tile>
     <mat-grid-tile>
-      <mat-card style="background-color:rgb(46, 43, 43);">
+      <mat-card>
         <mat-card-title>
           Dial 1
         </mat-card-title>

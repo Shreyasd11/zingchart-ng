@@ -8,9 +8,6 @@ import customers from './customers.js';
 })
 
 export class AppComponent {
-  title = 'zingchart';
-  name = 'angular';
-  today = new Date().toLocaleDateString();
   customers = customers;
 
   websiteTraffic: zingchart.graphset = {

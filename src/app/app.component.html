@@ -4,14 +4,20 @@
     <mat-toolbar-row>
       <span>
         <mat-form-field>
-          <input matInput aria-label="Search">
+          <input matInput type="text">
           <mat-placeholder>Search</mat-placeholder>
         </mat-form-field>
       </span>
+      <span class="spacer"></span>
+      <div class="top-toggle">
+       <mat-slide-toggle [checked]="checkedToggle" (toggleChange)="onToggleChange()"></mat-slide-toggle> 
+       <mat-slide-toggle [checked]="checkedToggle" (toggleChange)="onToggleChange()"></mat-slide-toggle> 
+       <mat-slide-toggle [checked]="checkedOtherToggle" (toggleChange)="onToggleChange()"></mat-slide-toggle> 
+      </div>
     </mat-toolbar-row>
   </mat-toolbar>
 
-  <div>
+  <div class="container">
   <!-- Grid-list for different types of charts -->
   <mat-grid-list cols="3" rowHeight="4:3" gutterSize="6px">
     <mat-grid-tile>
@@ -65,3 +71,11 @@
   </mat-grid-list>
 
 </div>
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-slide-toggle></mat-slide-toggle> 
+    <mat-slide-toggle></mat-slide-toggle> 
+    <mat-slide-toggle></mat-slide-toggle> 
+  </mat-toolbar-row>
+</mat-toolbar>

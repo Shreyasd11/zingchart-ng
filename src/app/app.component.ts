@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import customers from './customers.js';
 
 @Component({
@@ -7,9 +7,17 @@ import customers from './customers.js';
   styleUrls: ['./app.component.css']
 })
 
+
+
 export class AppComponent {
   customers = customers;
+  
+  @Output()
+  toggleChange:  EventEmitter<void>;
 
+  checkedToggle = true;
+  checkedOtherToggle = false;
+ 
   websiteTraffic: zingchart.graphset = {
     type: 'line',
     series: [{
@@ -67,4 +75,14 @@ export class AppComponent {
       }
     ]
   };
+
+  onToggleChange() {
+    if (this.checkedToggle){
+      this.checkedOtherToggle = true;
+      this.checkedToggle = false;
+    }else{
+      this.checkedToggle = true;
+      this.checkedOtherToggle = false;
+    }
+  } 
 }
